@@ -15,29 +15,12 @@
 #setuptools>=70.0.0
 #wheel>=0.43.0
 
-# Core
 streamlit==1.38.0
-
-# PDF & document processing
-pymupdf==1.24.9   # PyMuPDF (import as fitz)
-reportlab==4.2.2
-
-# Image processing
+pymupdf==1.24.9
 opencv-python-headless==4.10.0.84
 Pillow==10.4.0
 numpy==2.1.1
-
-# Text & Regex
-regex==2024.9.11
-
-# JSON & utilities
-ujson==5.10.0
-
-# Data handling
 pandas==2.2.2
-
-# Optional: AI / OCR (if you use them later)
-pytesseract==0.3.10
-
-# For compatibility
+regex==2024.9.11
+ujson==5.10.0
 protobuf==5.28.2
