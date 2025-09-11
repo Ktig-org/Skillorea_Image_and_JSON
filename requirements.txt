@@ -1,0 +1,6 @@
+pip install streamlit 
+pip install boto3 
+pip install python-dotenv 
+pip install ultralytics 
+pip install pymupdf 
+pip install opencv-python
