@@ -205,7 +205,7 @@
 #         st.success("✅ PDF processed and JSON ready!")
 
 
-# ***********************************************
+# *********************************************** SOURCE CODE UPDATED ************************************************
 
 
 
@@ -220,6 +220,7 @@ from ultralytics import YOLO
 import boto3
 from botocore.exceptions import NoCredentialsError
 import shutil
+from dotenv import load_dotenv
 
 # -------------------- CONFIG --------------------
 TEMP_IMAGE_FOLDER = "temp_images"
@@ -231,10 +232,16 @@ CAPTION_DISTANCE = 150
 QUESTION_PATTERN = re.compile(r"^\s*(\d+)\s*[\.\)]")
 YOLO_MODEL_PATH = r"D:\\Skillorea_S3\\runs\\detect\\train2\\weights\\best.pt"
 
-AWS_ACCESS_KEY_ID = "AKIAS66UDIHPHRDJ2XMP"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_REGION = "ap-south-1"
-S3_BUCKET_NAME = "studysmartdocuments"
+# AWS_ACCESS_KEY_ID = "AKIAS66UDIHPHRDJ2XMP"
+# AWS_SECRET_ACCESS_KEY = "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"
+# AWS_REGION = "ap-south-1"
+# S3_BUCKET_NAME = "studysmartdocuments"
+load_dotenv()
+
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_REGION = os.getenv("AWS_REGION")
+S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
 
 # -------------------- INITIAL SETUP --------------------
 os.makedirs(TEMP_IMAGE_FOLDER, exist_ok=True)
@@ -516,3 +523,7 @@ if os.path.exists(OUTPUT_JSON_NN):
 if os.path.exists(OUTPUT_DUP):
     with open(OUTPUT_DUP, "r", encoding="utf-8") as f:
         st.download_button("⬇️ Download Duplicates Questions in JSON", f.read(), "duplicate_output.txt", mime="text/plain")
+
+
+
+# *********************************************************************
