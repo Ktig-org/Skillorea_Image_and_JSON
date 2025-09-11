@@ -5,12 +5,39 @@
 # pip install pymupdf 
 # pip install opencv-python
 
-streamlit==1.39.0
-boto3==1.35.43
-python-dotenv==1.0.1
-ultralytics==8.3.24
-pymupdf==1.24.9
-opencv-python==4.10.0.84
-pip>=24.2
-setuptools>=70.0.0
-wheel>=0.43.0
+#streamlit==1.39.0
+#boto3==1.35.43
+#python-dotenv==1.0.1
+#ultralytics==8.3.24
+#pymupdf==1.24.9
+#opencv-python==4.10.0.84
+#pip>=24.2
+#setuptools>=70.0.0
+#wheel>=0.43.0
+
+# Core
+streamlit==1.38.0
+
+# PDF & document processing
+pymupdf==1.24.9   # PyMuPDF (import as fitz)
+reportlab==4.2.2
+
+# Image processing
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+numpy==2.1.1
+
+# Text & Regex
+regex==2024.9.11
+
+# JSON & utilities
+ujson==5.10.0
+
+# Data handling
+pandas==2.2.2
+
+# Optional: AI / OCR (if you use them later)
+pytesseract==0.3.10
+
+# For compatibility
+protobuf==5.28.2
