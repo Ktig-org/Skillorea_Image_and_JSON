@@ -1,22 +1,5 @@
-# pip install streamlit 
-# pip install boto3 
-# pip install python-dotenv 
-# pip install ultralytics 
-# pip install pymupdf 
-# pip install opencv-python
-
-#streamlit==1.39.0
-#boto3==1.35.43
-#python-dotenv==1.0.1
-#ultralytics==8.3.24
-#pymupdf==1.24.9
-#opencv-python==4.10.0.84
-#pip>=24.2
-#setuptools>=70.0.0
-#wheel>=0.43.0
-
 streamlit==1.38.0
-pymupdf==1.24.9
+PyMuPDF==1.24.9
 opencv-python-headless==4.10.0.84
 Pillow==10.4.0
 numpy==2.1.1
@@ -24,3 +7,6 @@ pandas==2.2.2
 regex==2024.9.11
 ujson==5.10.0
 protobuf==5.28.2
+boto3==1.35.43
+python-dotenv==1.0.1
+ultralytics==8.3.24
